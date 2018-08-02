@@ -553,8 +553,3 @@ res['floorplan'] = {
 
 with open('data.blueprint3d', 'w') as fp:
     json.dump(res, fp)
-
-
-if __name__=="__main__":
-    print()
-
