@@ -234,7 +234,7 @@ dst = cv2.cornerHarris(gray,cfg.HARRIS_BLOCK_SIZE,cfg.HARRIS_K_SIZE,cfg.HARRIS_K
 dst = cv2.dilate(dst,None)
 
 n = np.zeros_like(img2)
-n[dst>0.06*dst.max()] = [255,255,255]
+n[dst > cfg.HARRIS_QUALITY * dst.max()] = [255,255,255]
 
 '''Get the corner coordinates'''
 m = n[:,:,0] # Manual RGB to Binary
